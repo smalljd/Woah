@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F61EC4F1D9B62F300BA283C /* AccessoryBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F61EC4E1D9B62F300BA283C /* AccessoryBrowser.swift */; };
+		1F61EC4F1D9B62F300BA283C /* AccessoryBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F61EC4E1D9B62F300BA283C /* AccessoryBrowserDelegate.swift */; };
+		1F63B4111DA044DA0032A904 /* LightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63B4101DA044DA0032A904 /* LightTableViewCell.swift */; };
+		1F63B4151DA046F00032A904 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63B4141DA046F00032A904 /* CellIdentifiers.swift */; };
+		1F63B4191DA0520C0032A904 /* LightDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63B4181DA0520C0032A904 /* LightDataSource.swift */; };
 		1FA624C91D9B483300D23EA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA624C81D9B483300D23EA4 /* AppDelegate.swift */; };
-		1FA624CB1D9B483300D23EA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA624CA1D9B483300D23EA4 /* ViewController.swift */; };
+		1FA624CB1D9B483300D23EA4 /* LightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA624CA1D9B483300D23EA4 /* LightsViewController.swift */; };
 		1FA624CE1D9B483300D23EA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA624CC1D9B483300D23EA4 /* Main.storyboard */; };
 		1FA624D11D9B483300D23EA4 /* Woah.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FA624CF1D9B483300D23EA4 /* Woah.xcdatamodeld */; };
 		1FA624D31D9B483300D23EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA624D21D9B483300D23EA4 /* Assets.xcassets */; };
@@ -17,8 +20,10 @@
 		1FA624E11D9B483300D23EA4 /* WoahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA624E01D9B483300D23EA4 /* WoahTests.swift */; };
 		1FA624EC1D9B483300D23EA4 /* WoahUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA624EB1D9B483300D23EA4 /* WoahUITests.swift */; };
 		1FA624FC1D9B486F00D23EA4 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA624FB1D9B486F00D23EA4 /* HomeKit.framework */; };
-		1FA625001D9B4B7500D23EA4 /* HomeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA624FF1D9B4B7500D23EA4 /* HomeDelegate.swift */; };
 		1FA625021D9B4BC300D23EA4 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA625011D9B4BC300D23EA4 /* HomeManager.swift */; };
+		1FB075801DA19FCB008B3FA3 /* HMAccessory+Woah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0757F1DA19FCB008B3FA3 /* HMAccessory+Woah.swift */; };
+		1FB075831DA1CF82008B3FA3 /* UIView+Woah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB075821DA1CF82008B3FA3 /* UIView+Woah.swift */; };
+		1FB075851DA1D0E8008B3FA3 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB075841DA1D0E8008B3FA3 /* ColorPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F61EC4E1D9B62F300BA283C /* AccessoryBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessoryBrowser.swift; path = Accessories/AccessoryBrowser.swift; sourceTree = "<group>"; };
+		1F61EC4E1D9B62F300BA283C /* AccessoryBrowserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessoryBrowserDelegate.swift; path = Accessories/AccessoryBrowserDelegate.swift; sourceTree = "<group>"; };
+		1F63B4101DA044DA0032A904 /* LightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightTableViewCell.swift; sourceTree = "<group>"; };
+		1F63B4141DA046F00032A904 /* CellIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
+		1F63B4181DA0520C0032A904 /* LightDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightDataSource.swift; path = Accessories/LightDataSource.swift; sourceTree = "<group>"; };
 		1FA624C51D9B483300D23EA4 /* Woah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA624C81D9B483300D23EA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1FA624CA1D9B483300D23EA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FA624CA1D9B483300D23EA4 /* LightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsViewController.swift; sourceTree = "<group>"; };
 		1FA624CD1D9B483300D23EA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FA624D01D9B483300D23EA4 /* Woah.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Woah.xcdatamodel; sourceTree = "<group>"; };
 		1FA624D21D9B483300D23EA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,8 +64,10 @@
 		1FA624ED1D9B483300D23EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA624F91D9B486600D23EA4 /* Woah.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Woah.entitlements; sourceTree = "<group>"; };
 		1FA624FB1D9B486F00D23EA4 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
-		1FA624FF1D9B4B7500D23EA4 /* HomeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeDelegate.swift; path = Homes/HomeDelegate.swift; sourceTree = "<group>"; };
 		1FA625011D9B4BC300D23EA4 /* HomeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeManager.swift; path = Homes/HomeManager.swift; sourceTree = "<group>"; };
+		1FB0757F1DA19FCB008B3FA3 /* HMAccessory+Woah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HMAccessory+Woah.swift"; sourceTree = "<group>"; };
+		1FB075821DA1CF82008B3FA3 /* UIView+Woah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Woah.swift"; sourceTree = "<group>"; };
+		1FB075841DA1D0E8008B3FA3 /* ColorPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +99,28 @@
 		1F61EC4B1D9B62AB00BA283C /* Accessories */ = {
 			isa = PBXGroup;
 			children = (
-				1F61EC4E1D9B62F300BA283C /* AccessoryBrowser.swift */,
+				1F63B4121DA044DF0032A904 /* Lights */,
+				1F61EC4E1D9B62F300BA283C /* AccessoryBrowserDelegate.swift */,
 			);
 			name = Accessories;
+			sourceTree = "<group>";
+		};
+		1F63B4121DA044DF0032A904 /* Lights */ = {
+			isa = PBXGroup;
+			children = (
+				1FA624CA1D9B483300D23EA4 /* LightsViewController.swift */,
+				1F63B4101DA044DA0032A904 /* LightTableViewCell.swift */,
+				1F63B4181DA0520C0032A904 /* LightDataSource.swift */,
+			);
+			name = Lights;
+			sourceTree = "<group>";
+		};
+		1F63B4131DA046DC0032A904 /* Identifiers */ = {
+			isa = PBXGroup;
+			children = (
+				1F63B4141DA046F00032A904 /* CellIdentifiers.swift */,
+			);
+			name = Identifiers;
 			sourceTree = "<group>";
 		};
 		1FA624BC1D9B483200D23EA4 = {
@@ -118,10 +147,11 @@
 		1FA624C71D9B483300D23EA4 /* Woah */ = {
 			isa = PBXGroup;
 			children = (
+				1FB0757E1DA19FB9008B3FA3 /* Extensions */,
+				1F63B4131DA046DC0032A904 /* Identifiers */,
 				1FA624FD1D9B4AEC00D23EA4 /* HomeKit */,
 				1FA624F91D9B486600D23EA4 /* Woah.entitlements */,
 				1FA624C81D9B483300D23EA4 /* AppDelegate.swift */,
-				1FA624CA1D9B483300D23EA4 /* ViewController.swift */,
 				1FA624CC1D9B483300D23EA4 /* Main.storyboard */,
 				1FA624D21D9B483300D23EA4 /* Assets.xcassets */,
 				1FA624D41D9B483300D23EA4 /* LaunchScreen.storyboard */,
@@ -160,8 +190,8 @@
 		1FA624FD1D9B4AEC00D23EA4 /* HomeKit */ = {
 			isa = PBXGroup;
 			children = (
+				1FB075811DA1CF36008B3FA3 /* Color Picker */,
 				1F61EC4B1D9B62AB00BA283C /* Accessories */,
-				1FA625031D9B4C4700D23EA4 /* Rooms */,
 				1FA624FE1D9B4AF500D23EA4 /* Homes */,
 			);
 			name = HomeKit;
@@ -170,17 +200,26 @@
 		1FA624FE1D9B4AF500D23EA4 /* Homes */ = {
 			isa = PBXGroup;
 			children = (
-				1FA624FF1D9B4B7500D23EA4 /* HomeDelegate.swift */,
 				1FA625011D9B4BC300D23EA4 /* HomeManager.swift */,
 			);
 			name = Homes;
 			sourceTree = "<group>";
 		};
-		1FA625031D9B4C4700D23EA4 /* Rooms */ = {
+		1FB0757E1DA19FB9008B3FA3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1FB075821DA1CF82008B3FA3 /* UIView+Woah.swift */,
+				1FB0757F1DA19FCB008B3FA3 /* HMAccessory+Woah.swift */,
 			);
-			name = Rooms;
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		1FB075811DA1CF36008B3FA3 /* Color Picker */ = {
+			isa = PBXGroup;
+			children = (
+				1FB075841DA1D0E8008B3FA3 /* ColorPickerView.swift */,
+			);
+			name = "Color Picker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,11 +368,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA625021D9B4BC300D23EA4 /* HomeManager.swift in Sources */,
-				1F61EC4F1D9B62F300BA283C /* AccessoryBrowser.swift in Sources */,
+				1F61EC4F1D9B62F300BA283C /* AccessoryBrowserDelegate.swift in Sources */,
 				1FA624D11D9B483300D23EA4 /* Woah.xcdatamodeld in Sources */,
-				1FA625001D9B4B7500D23EA4 /* HomeDelegate.swift in Sources */,
-				1FA624CB1D9B483300D23EA4 /* ViewController.swift in Sources */,
+				1FB075801DA19FCB008B3FA3 /* HMAccessory+Woah.swift in Sources */,
+				1F63B4191DA0520C0032A904 /* LightDataSource.swift in Sources */,
+				1F63B4111DA044DA0032A904 /* LightTableViewCell.swift in Sources */,
+				1FA624CB1D9B483300D23EA4 /* LightsViewController.swift in Sources */,
+				1FB075851DA1D0E8008B3FA3 /* ColorPickerView.swift in Sources */,
+				1F63B4151DA046F00032A904 /* CellIdentifiers.swift in Sources */,
 				1FA624C91D9B483300D23EA4 /* AppDelegate.swift in Sources */,
+				1FB075831DA1CF82008B3FA3 /* UIView+Woah.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

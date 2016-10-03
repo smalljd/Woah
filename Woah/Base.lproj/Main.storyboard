@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,7 @@
         <!--Lights-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Woah" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LightsViewController" customModule="Woah" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -44,15 +45,18 @@
                                 <state key="normal" title="Let's Party!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="partyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lT0-YM-wjO"/>
+                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UfN-E5-kt5">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UfN-E5-kt5">
+                                <color key="backgroundColor" red="0.88487580129999999" green="0.88487580129999999" blue="0.88487580129999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="29" id="44l-mP-8wB" userLabel="Room header cell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="29"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="44l-mP-8wB" id="L0m-Pb-tir">
-                                            <frame key="frameInset" width="375" height="28"/>
+                                            <frame key="frameInset" width="375" height="29"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaM-Kk-DGb">
@@ -69,30 +73,39 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.88487580129999999" green="0.88487580129999999" blue="0.88487580129999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="LFN-Bf-wsb" userLabel="Light Cell">
+                                    <tableViewCell clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lightCellIdentifier" rowHeight="100" id="LFN-Bf-wsb" userLabel="Light Cell" customClass="LightTableViewCell" customModule="Woah" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="57" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LFN-Bf-wsb" id="cOa-yh-wxw">
-                                            <frame key="frameInset" width="375" height="99"/>
+                                            <frame key="frameInset" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DIE-ID-rvf">
                                                     <color key="onTintColor" red="0.18982995720000001" green="0.62955555620000003" blue="0.67385817309999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="lightSwitchValueChanged:" destination="LFN-Bf-wsb" eventType="valueChanged" id="AZH-6x-CRh"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV Light" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCh-OV-Efe">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k4W-PN-XAI">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="k4W-PN-XAI">
                                                     <color key="minimumTrackTintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="thumbTintColor" red="0.18982995720000001" green="0.62955555620000003" blue="0.67385817309999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="dimmerValueChanged:forEvent:" destination="LFN-Bf-wsb" eventType="valueChanged" id="AIY-5d-Wo2"/>
+                                                    </connections>
                                                 </slider>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owp-Yo-uX7">
+                                                <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owp-Yo-uX7">
                                                     <color key="backgroundColor" red="0.7650240385" green="0.0" blue="0.0071619680320000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="45" id="eMv-KJ-qCj"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="colorButtonTapped:" destination="LFN-Bf-wsb" eventType="touchUpInside" id="7wj-Jm-4dp"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -109,6 +122,13 @@
                                                 <constraint firstItem="k4W-PN-XAI" firstAttribute="leading" secondItem="Owp-Yo-uX7" secondAttribute="leading" id="vsS-KY-3EN"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="colorButton" destination="Owp-Yo-uX7" id="PNl-8a-vEk"/>
+                                            <outlet property="dimmer" destination="k4W-PN-XAI" id="P9o-fA-6Rc"/>
+                                            <outlet property="lightSwitch" destination="DIE-ID-rvf" id="vd2-Ap-mV5"/>
+                                            <outlet property="titleLabel" destination="QCh-OV-Efe" id="Cyu-C3-FLz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -128,11 +148,60 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7q3-Le-fC4" secondAttribute="bottom" id="uPy-kw-orC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Lights" id="OWo-mb-SU9"/>
+                    <navigationItem key="navigationItem" title="Lights" id="OWo-mb-SU9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QcC-62-31g"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="modalSpinner" destination="oSv-CA-k0x" id="PLJ-5r-Ch3"/>
+                        <outlet property="tableView" destination="UfN-E5-kt5" id="Bog-hX-OP1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="895.20000000000005" y="119.1904047976012"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ztp-gz-Fbp">
+            <objects>
+                <viewController id="kFa-I7-R8u" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B0e-rF-nQ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="11S-bn-tGT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tJZ-mB-Adf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0P-Jx-Ef6">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="O0P-Jx-Ef6" secondAttribute="height" multiplier="1:1" id="9sf-Nf-ir1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.70288254310344822" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O0P-Jx-Ef6" firstAttribute="centerY" secondItem="tJZ-mB-Adf" secondAttribute="centerY" id="ABx-Xs-cIf"/>
+                            <constraint firstItem="O0P-Jx-Ef6" firstAttribute="leading" secondItem="tJZ-mB-Adf" secondAttribute="leadingMargin" constant="51" id="GMP-6n-XIX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O0P-Jx-Ef6" secondAttribute="trailing" constant="52" id="H5b-Wc-93D"/>
+                            <constraint firstItem="O0P-Jx-Ef6" firstAttribute="centerX" secondItem="tJZ-mB-Adf" secondAttribute="centerX" id="ctZ-CE-DwL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="msP-i5-led" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a4E-Uz-8Fb">
